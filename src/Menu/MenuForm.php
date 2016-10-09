@@ -13,19 +13,18 @@ namespace Eureka\Component\Menu;
  * Class to set menu form.
  *
  * @author  Romain Cottard
- * @version 1.0.0
  */
 class MenuForm
 {
     /**
-     * @var string $name
+     * @var string $name Menu name
      */
     private $template = '';
 
     /**
-     * @var array $params
+     * @var array $params Form parameters
      */
-    private $params  = '';
+    private $params = '';
 
     /**
      * BreadcrumbItem constructor.
@@ -63,7 +62,7 @@ class MenuForm
      * Set template
      *
      * @param  string $template
-     * @return $this
+     * @return self
      */
     public function setTemplate($template)
     {
@@ -76,7 +75,7 @@ class MenuForm
      * Set params.
      *
      * @param  array $params
-     * @return $this
+     * @return self
      */
     public function setParams($params = array())
     {

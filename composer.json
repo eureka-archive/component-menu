@@ -14,7 +14,7 @@
 
   "autoload": {
     "psr-4": {
-      "Eureka\\Component\\Menu\\": "./"
+      "Eureka\\Component\\Menu\\": "./src/Menu/"
     }
   }
 

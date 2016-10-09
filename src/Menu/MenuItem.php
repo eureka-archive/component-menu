@@ -13,32 +13,31 @@ namespace Eureka\Component\Menu;
  * Class to set menu item.
  *
  * @author  Romain Cottard
- * @version 1.0.0
  */
 class MenuItem
 {
     /**
-     * @var string $name
+     * @var string $name Menu name
      */
     private $name = '';
 
     /**
-     * @var string $icon
+     * @var string $icon Menu icon
      */
     private $icon = '';
 
     /**
-     * @var string $uri
+     * @var string $uri Menu URI
      */
-    private $uri  = '';
+    private $uri = '';
 
     /**
-     * @var bool $isActive
+     * @var bool $isActive If is currently active
      */
     private $isActive = false;
 
     /**
-     * BreadcrumbItem constructor.
+     * MenuItem constructor.
      *
      * @param $name
      */
@@ -91,7 +90,7 @@ class MenuItem
      * Set name
      *
      * @param  string $name
-     * @return $this
+     * @return self
      */
     public function setName($name)
     {
@@ -104,7 +103,7 @@ class MenuItem
      * Set icon.
      *
      * @param  string $icon
-     * @return $this
+     * @return self
      */
     public function setIcon($icon)
     {
@@ -117,7 +116,7 @@ class MenuItem
      * Set uri
      *
      * @param  string $uri
-     * @return $this
+     * @return self
      */
     public function setUri($uri)
     {
@@ -128,8 +127,9 @@ class MenuItem
 
     /**
      * Set is Active
+     *
      * @param  bool $isActive
-     * @return $this
+     * @return self
      */
     public function setIsActive($isActive)
     {
