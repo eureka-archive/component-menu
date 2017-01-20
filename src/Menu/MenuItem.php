@@ -32,6 +32,11 @@ class MenuItem
     private $uri = '';
 
     /**
+     * @var Menu|null $submenu Sub menu.
+     */
+    private $submenu = null;
+
+    /**
      * @var bool $isActive If is currently active
      */
     private $isActive = false;
@@ -77,6 +82,16 @@ class MenuItem
     }
 
     /**
+     * Get submenu
+     *
+     * @return Menu|null
+     */
+    public function getSubmenu()
+    {
+        return $this->submenu;
+    }
+
+    /**
      * Get is active.
      *
      * @return bool
@@ -84,6 +99,26 @@ class MenuItem
     public function isActive()
     {
         return $this->isActive;
+    }
+
+    /**
+     * If has submenu with elements.
+     *
+     * @return bool
+     */
+    public function hasIcon()
+    {
+        return !empty($this->getIcon());
+    }
+
+    /**
+     * If has submenu with elements.
+     *
+     * @return bool
+     */
+    public function hasSubmenu()
+    {
+        return ($this->submenu instanceof Menu) && $this->submenu->count() > 0;
     }
 
     /**
@@ -134,6 +169,19 @@ class MenuItem
     public function setIsActive($isActive)
     {
         $this->isActive = $isActive;
+
+        return $this;
+    }
+
+    /**
+     * Set submenu instance.
+     *
+     * @param  Menu $submenu
+     * @return self
+     */
+    public function setSubmenu(Menu $submenu)
+    {
+        $this->submenu = $submenu;
 
         return $this;
     }
